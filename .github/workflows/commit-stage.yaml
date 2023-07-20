@@ -30,7 +30,19 @@ jobs:
         if: success() || failure()
         with:
           sarif_file: ${{ steps.scan.outputs.sarif }}
-      - name: Build, unit tests and integration tests
+      - name: Build
         run: |
           chmod +x mvnw
-          ./mvnw test package
+          ./mvnw --batch-mode -DskipTests
+      - name: Test
+        run: | 
+          chmod +x mvnw
+          ./mvnw --batch-mode -Dmaven.test.failure.ignore=true test
+      - name: Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Maven tests
+          path: target/surefire-reports/*.xml
+          fail-on-error: true
+          

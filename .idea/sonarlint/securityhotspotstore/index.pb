@@ -19,16 +19,5 @@ o
 ?src/main/java/dev/nelson/catalogservice/web/BookController.java,d\7\d78b6ee1996b8ad92e9feca71d66e1aad9ca8fa9
 u
 Esrc/main/java/dev/nelson/catalogservice/web/BookControllerAdvice.java,8\6\86e505623e65a17ccbd6a0508b9db3641eb0f716
-{
-Ksrc/test/java/dev/nelson/catalogservice/CatalogServiceApplicationTests.java,b\4\b4a304d63f3621c13de3c26b7c3fd46d97e74541
-w
-Gsrc/test/java/dev/nelson/catalogservice/web/BookControllerMvcTests.java,4\c\4cda5a5c8d9ffaae9d60ce9688caac2f5713170c
-m
-=src/test/java/dev/nelson/catalogservice/web/BookJsonTest.java,2\9\29e3028e79492cff4dee0cc7c0077c4e7e935d46
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-S
-#.github/workflows/commit-stage.yaml,3\9\39762fe647fb0e381880febb1895b35f1aa3d876
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
