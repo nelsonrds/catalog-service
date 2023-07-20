@@ -33,7 +33,7 @@ jobs:
       - name: Build
         run: |
           chmod +x mvnw
-          ./mvnw --batch-mode -DskipTests
+          ./mvnw --batch-mode -DskipTests package
       - name: Test
         run: | 
           chmod +x mvnw
