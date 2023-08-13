@@ -33,17 +33,5 @@ jobs:
       - name: Build
         run: |
           chmod +x mvnw
-          ./mvnw --batch-mode -DskipTests package
-      - name: Test
-        run: | 
-          chmod +x mvnw
-          ./mvnw --batch-mode -Dmaven.test.failure.ignore=true test
-      - name: Report
-        uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          name: Maven tests
-          path: target/surefire-reports/*.xml
-          reporter: java-junit
-          fail-on-error: true
+          ./mvnw test package
           
