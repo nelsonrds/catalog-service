@@ -6,5 +6,24 @@ server:
     threads:
       max: 50
       min-spare: 5
-polar:
-  greetings: Welcome to the jungle
+spring:
+  application:
+    name: catalog-service
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888
+      request-connect-timeout: 5000 # timeout on waiting to connect to the config server (ms)
+      request-read-timeout: 5000 # timeout on waiting to read configuration data from the config server (ms)
+      fail-fast: true
+      retry: # this is enabled because of fail-fast = true
+        max-attempts: 6
+        initial-interval: 1000
+        max-interval: 2000
+        multiplier: 1.1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
